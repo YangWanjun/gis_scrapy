@@ -8,13 +8,7 @@
 import scrapy
 
 
-class ScrapyShopItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
-
-
-class BaseShopItem(scrapy.Item):
+class ShopItem(scrapy.Item):
     pref_code = scrapy.Field()
     pref_name = scrapy.Field()
     city_name = scrapy.Field()
@@ -24,24 +18,23 @@ class BaseShopItem(scrapy.Item):
     address = scrapy.Field()
     tel = scrapy.Field()
     service_time = scrapy.Field()
+    regular_holiday = scrapy.Field()
     link = scrapy.Field()
+    lat = scrapy.Field()
+    lng = scrapy.Field()
 
 
-class SevenItem(BaseShopItem):
+class SevenItem(ShopItem):
     pass
 
 
 class SevenCoordinateItem(SevenItem):
-    lat = scrapy.Field()
-    lng = scrapy.Field()
+    pass
 
 
-class MatsukiyoItem(BaseShopItem):
-    regular_holiday = scrapy.Field()
-    lat = scrapy.Field()
-    lng = scrapy.Field()
+class MatsukiyoItem(ShopItem):
+    pass
 
 
-class FamilyShopItem(BaseShopItem):
-    lat = scrapy.Field()
-    lng = scrapy.Field()
+class FamilyShopItem(ShopItem):
+    pass
