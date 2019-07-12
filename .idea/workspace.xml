@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec173c54-f2d6-467e-a80e-121101e499e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gis_scrapy/spiders/lawson.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/errors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/family.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/map_shop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/matsukiyo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/spiders/seven.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/utils/common.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapy_shop/utils/constant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/spiders/family.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/spiders/family.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/spiders/map_shop.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/spiders/map_shop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/spiders/matsukiyo.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/spiders/matsukiyo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_scrapy/spiders/seven.py" beforeDir="false" afterPath="$PROJECT_DIR$/gis_scrapy/spiders/seven.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,43 +19,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/852357165/-337502517/scrapy/spiders/crawl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gis_scrapy/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gis_scrapy/items.py">
+        <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/lawson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="225">
+              <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/852357165/-337502517/scrapy/spiders/__init__.py">
+        <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/family.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+            <state relative-caret-position="274">
+              <caret line="67" selection-start-line="67" selection-end-line="68" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,20 +54,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>area</find>
-      <find>pg%3D1</find>
-      <find>url</find>
-      <find>page</find>
-      <find>errors</find>
-      <find>url_params</find>
-      <find>href</find>
-      <find>city_name</find>
-      <find>pref_name</find>
-      <find>aza_name</find>
-      <find>params</find>
       <find>response</find>
       <find>parse_coordinate</find>
-      <find>break</find>
       <find>DICT_PREF</find>
       <find>dict_pref</find>
       <find>https://www.e-map.ne.jp/p/matukiyo</find>
@@ -104,7 +67,27 @@
       <find>parse_shop</find>
       <find>spider</find>
       <find>ScrapyShopItem</find>
+      <find>custom_settings</find>
+      <find>scrapy_shop</find>
+      <find>aza_name</find>
+      <find>parse_aza</find>
+      <find>page</find>
+      <find>yield</find>
+      <find>strip</find>
+      <find>lxml.html</find>
+      <find>ele</find>
+      <find>lat</find>
+      <find>shop_name</find>
+      <find>print</find>
+      <find>次へ</find>
+      <find>dict_cnt</find>
+      <find>link</find>
+      <find>break</find>
+      <find>return</find>
     </findStrings>
+    <replaceStrings>
+      <replace>town_name</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,7 +109,13 @@
         <option value="$PROJECT_DIR$/scrapy_shop/spiders/family.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gis_scrapy/spiders/seven.py" />
+        <option value="$PROJECT_DIR$/gis_scrapy/spiders/matsukiyo.py" />
+        <option value="$PROJECT_DIR$/gis_scrapy/spiders/map_shop.py" />
+        <option value="$PROJECT_DIR$/gis_scrapy/settings.py" />
         <option value="$PROJECT_DIR$/gis_scrapy/items.py" />
+        <option value="$PROJECT_DIR$/gis_scrapy/spiders/family.py" />
+        <option value="$PROJECT_DIR$/gis_scrapy/spiders/lawson.py" />
       </list>
     </option>
   </component>
@@ -165,11 +154,6 @@
               <item name="gis_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="gis_scrapy" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gis_scrapy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gis_scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,12 +194,12 @@
       <workItem from="1562729956880" duration="22223000" />
       <workItem from="1562815384840" duration="16361000" />
       <workItem from="1562908775393" duration="584000" />
-      <workItem from="1562909841467" duration="1150000" />
+      <workItem from="1562909841467" duration="11695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40318000" />
+    <option name="totallyTimeSpent" value="50863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -225,7 +209,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -342,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/852357165/-337502517/scrapy/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_shop/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -373,10 +350,88 @@
     <entry file="file://$PROJECT_DIR$/gis_scrapy/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/errors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="65" column="64" lean-forward="true" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/852357165/-337502517/scrapy/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="93" column="44" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/utils/constant.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/map_shop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/matsukiyo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/seven.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gis_scrapy/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="425">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/family.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="67" selection-start-line="67" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis_scrapy/spiders/lawson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

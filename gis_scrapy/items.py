@@ -11,8 +11,10 @@ import scrapy
 class ShopItem(scrapy.Item):
     pref_code = scrapy.Field()
     pref_name = scrapy.Field()
+    city_code = scrapy.Field()
     city_name = scrapy.Field()
-    aza_name = scrapy.Field()
+    town_code = scrapy.Field()
+    town_name = scrapy.Field()
     shop_name = scrapy.Field()
     post_code = scrapy.Field()
     address = scrapy.Field()

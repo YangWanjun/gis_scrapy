@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for scrapy_shop project
+# Scrapy settings for gis_scrapy project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapy_shop'
+BOT_NAME = 'gis_scrapy'
 
-SPIDER_MODULES = ['scrapy_shop.spiders']
-NEWSPIDER_MODULE = 'scrapy_shop.spiders'
+SPIDER_MODULES = ['gis_scrapy.spiders']
+NEWSPIDER_MODULE = 'gis_scrapy.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'scrapy_shop (+http://www.yourdomain.com)'
+#USER_AGENT = 'gis_scrapy (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'scrapy_shop.middlewares.ScrapyShopSpiderMiddleware': 543,
+#    'gis_scrapy.middlewares.ScrapyShopSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'scrapy_shop.middlewares.ScrapyShopDownloaderMiddleware': 543,
+#    'gis_scrapy.middlewares.ScrapyShopDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'scrapy_shop.pipelines.ScrapyShopPipeline': 300,
+#    'gis_scrapy.pipelines.ScrapyShopPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

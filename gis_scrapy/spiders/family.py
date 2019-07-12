@@ -2,10 +2,11 @@ import scrapy
 import re
 from collections import defaultdict
 from urllib.parse import urljoin
-from scrapy_shop.utils import constant
-from scrapy_shop.items import FamilyShopItem
+from gis_scrapy.utils import constant
+from gis_scrapy.items import FamilyShopItem
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
+from .errors import MyException
 
 root_url = 'http://as.chizumaru.com/'
 
@@ -18,6 +19,8 @@ class FamilySpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(FamilySpider, self).__init__(*args, **kwargs)
         self.pref_code = kwargs.get('code', None)
+        if not re.match('^[0-9]{2}$', self.pref_code):
+            raise MyException('都道府県コードを入力してください')
         dispatcher.connect(self.spider_closed, signals.spider_closed)
 
     def spider_closed(self, spider):
