@@ -128,7 +128,19 @@ class LawsonSpider(scrapy.Spider):
             else:
                 print(pref_code, city_name, town_name, response.url, '座標取得できない。')
         else:
-            print(pref_code, city_name, town_name, response.url, '地図情報見つからない。')
+            m = re.findall(r'lat=(\d+\.\d+)&lon=(\d+\.\d+)', response.url)
+            if m:
+                lat, lng = m[0]
+                url = url_format.format(lat=lat, lng=lng, page=0)
+                yield scrapy.Request(url=url, callback=self.parse_shop_list, meta={
+                    'pref_code': pref_code,
+                    'city_code': city_code,
+                    'city_name': city_name,
+                    'town_code': town_code,
+                    'town_name': town_name,
+                })
+            else:
+                print(pref_code, city_name, town_name, response.url, '地図情報見つからない。')
 
     def parse_shop_list(self, response):
         pref_code = response.meta.get('pref_code', None)
