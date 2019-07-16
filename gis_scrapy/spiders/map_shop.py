@@ -1,7 +1,7 @@
 import scrapy
 import re
 import csv
-from gis_scrapy.items import SevenCoordinateItem
+from gis_scrapy.items import ShopItem as SevenCoordinateItem
 
 
 class MapShopSpider(scrapy.Spider):

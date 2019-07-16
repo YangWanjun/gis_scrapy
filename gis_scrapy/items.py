@@ -24,19 +24,3 @@ class ShopItem(scrapy.Item):
     link = scrapy.Field()
     lat = scrapy.Field()
     lng = scrapy.Field()
-
-
-class SevenItem(ShopItem):
-    pass
-
-
-class SevenCoordinateItem(SevenItem):
-    pass
-
-
-class MatsukiyoItem(ShopItem):
-    pass
-
-
-class FamilyShopItem(ShopItem):
-    pass

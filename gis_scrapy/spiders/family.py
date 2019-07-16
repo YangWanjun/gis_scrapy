@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 from urllib.parse import urljoin
 from gis_scrapy.utils import constant
-from gis_scrapy.items import FamilyShopItem
+from gis_scrapy.items import ShopItem as FamilyShopItem
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
 from .errors import MyException

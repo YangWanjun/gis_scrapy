@@ -2,7 +2,7 @@ import scrapy
 import re
 from urllib.parse import urljoin
 from gis_scrapy.utils import constant
-from gis_scrapy.items import MatsukiyoItem
+from gis_scrapy.items import ShopItem as MatsukiyoItem
 
 root_url = 'https://www.e-map.ne.jp/p/matukiyo/'
 

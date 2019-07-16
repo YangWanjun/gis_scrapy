@@ -3,7 +3,7 @@ import lxml.html
 import urllib.parse
 import re
 from . import errors
-from gis_scrapy.items import SevenItem
+from gis_scrapy.items import ShopItem as SevenItem
 from gis_scrapy.utils import constant
 
 url_root = 'https://www.e-map.ne.jp/smt/711map/'
