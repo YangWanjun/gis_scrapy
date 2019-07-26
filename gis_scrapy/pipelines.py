@@ -12,6 +12,15 @@ from .items import RailwayCompanyItem, RailwayRouteItem, RailwayStationItem, Joi
 
 class RailwayCompanyPipeline(object):
 
+    def __init__(self, *args, **kwargs):
+        super(RailwayCompanyPipeline, self).__init__(*args, **kwargs)
+        self.conn = None
+        self.cur = None
+        self.railway_company_list = []
+        self.railway_route_list = []
+        self.railway_station_list = []
+        self.join_station_list = []
+
     def open_spider(self, spider: scrapy.Spider):
         # コネクションの開始
         url = spider.settings.get('POSTGRESQL_URL')
@@ -20,21 +29,33 @@ class RailwayCompanyPipeline(object):
 
     def close_spider(self, spider: scrapy.Spider):
         # コネクションの終了
+        print('railway_company_list', len(self.railway_company_list))
+        print('railway_route_list', len(self.railway_route_list))
+        print('railway_station_list', len(self.railway_station_list))
+        print('join_station_list', len(self.join_station_list))
+        for item in self.railway_company_list:
+            self.add_railway_company(item)
+        for item in self.railway_route_list:
+            self.add_railway_route(item)
+        for item in self.railway_station_list:
+            self.add_railway_station(item)
+        for item in self.join_station_list:
+            self.add_join_station(item)
+        self.conn.commit()
         self.cur.close()
         self.conn.close()
 
     def process_item(self, item: scrapy.Item, spider: scrapy.Spider):
         if isinstance(item, RailwayCompanyItem):
-            self.add_railway_company(item)
+            self.railway_company_list.append(item)
         elif isinstance(item, RailwayRouteItem):
-            self.add_railway_route(item)
+            self.railway_route_list.append(item)
         elif isinstance(item, RailwayStationItem):
-            self.add_railway_station(item)
+            self.railway_station_list.append(item)
         elif isinstance(item, JoinStationItem):
-            self.add_join_station(item)
+            self.join_station_list.append(item)
         else:
             print('UNKNOWN')
-        self.conn.commit()
         return item
 
     def add_railway_company(self, item):
@@ -66,7 +87,7 @@ class RailwayCompanyPipeline(object):
         sql = "INSERT INTO gis_railway_route (" \
               "    line_code, company_code, " \
               "    line_name, line_kana, line_full_name, color_code, color_name, " \
-              "    line_type, lng, lat, zoom, status, " \
+              "    line_type, center_lng, center_lat, zoom, status, " \
               "    created_dt, updated_dt, is_deleted" \
               ") " \
               "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
@@ -80,8 +101,8 @@ class RailwayCompanyPipeline(object):
             item.get('color_code'),
             item.get('color_name'),
             item.get('line_type'),
-            float(item.get('lng')) if item.get('lng') else None,
-            float(item.get('lat')) if item.get('lng') else None,
+            float(item.get('center_lng')) if item.get('center_lng') else None,
+            float(item.get('center_lat')) if item.get('center_lng') else None,
             int(item.get('zoom')) if item.get('zoom') else None,
             item.get('status'),
             datetime.datetime.now(),
@@ -137,11 +158,26 @@ class RailwayCompanyPipeline(object):
               ") " \
               "VALUES (%s, %s, %s, %s, %s, %s, %s);"
 
+        line_code = int(item.get('line_code'))
+        station_code1 = int(item.get('station_code1'))
+        station_code2 = int(item.get('station_code2'))
+        self.cur.execute('SELECT COUNT(1) FROM gis_railway_route WHERE line_code = %s', (line_code,))
+        if self.cur.fetchone()[0] == 0:
+            print('路線{}が存在しません。'.format(line_code))
+            return
+        self.cur.execute('SELECT COUNT(1) FROM gis_station WHERE station_code = %s', (station_code1,))
+        if self.cur.fetchone()[0] == 0:
+            print('駅{}が存在しません。'.format(station_code1))
+            return
+        self.cur.execute('SELECT COUNT(1) FROM gis_station WHERE station_code = %s', (station_code2,))
+        if self.cur.fetchone()[0] == 0:
+            print('駅{}が存在しません。'.format(station_code2))
+            return
         data = (
             int(item.get('pk')),
-            int(item.get('line_code')),
-            int(item.get('station_code1')),
-            int(item.get('station_code2')),
+            line_code,
+            station_code1,
+            station_code2,
             datetime.datetime.now(),
             datetime.datetime.now(),
             False,

@@ -77,8 +77,8 @@ class StationSpider(scrapy.Spider):
                 item['color_code'] = data.get('line_color_c')
                 item['color_name'] = data.get('line_color_t')
                 item['line_type'] = data.get('line_type')
-                item['lng'] = data.get('lon')
-                item['lat'] = data.get('lat')
+                item['center_lng'] = data.get('lon')
+                item['center_lat'] = data.get('lat')
                 item['zoom'] = data.get('zoom')
                 item['status'] = data.get('e_status')
                 yield item

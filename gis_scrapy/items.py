@@ -47,8 +47,8 @@ class RailwayRouteItem(scrapy.Item):
     color_code = scrapy.Field()
     color_name = scrapy.Field()
     line_type = scrapy.Field()
-    lng = scrapy.Field()
-    lat = scrapy.Field()
+    center_lng = scrapy.Field()
+    center_lat = scrapy.Field()
     zoom = scrapy.Field()
     status = scrapy.Field()
 
