@@ -36,6 +36,7 @@ class BoundaryCitySpider(BaseSpider):
         conn_string = self.settings.get('POSTGRESQL_URL')
         with psycopg2.connect(conn_string) as conn:
             with conn.cursor() as cursor:
+                cursor.execute('truncate gis_city;')
                 for filename in os.listdir(TEMP_DIR):
                     if not filename.endswith('.shp'):
                         continue
@@ -61,3 +62,16 @@ class BoundaryCitySpider(BaseSpider):
                             datetime.datetime.now(),
                             False,
                         ))
+                # 市区町村から都道府県をマージする
+                cursor.execute('truncate gis_pref;')
+                cursor.execute("insert into gis_pref ("
+                               "    created_dt,updated_dt,is_deleted,pref_code,pref_name,"
+                               "    people_count,family_count,mpoly"
+                               ")"
+                               "select now(), now(), false"
+                               "     , pref_code, max(pref_name), max(people_count), max(family_count)"
+                               "     , ST_MULTI(ST_UNION(ST_SnapToGrid(mpoly,0.00001)))"
+                               "  from gis_city "
+                               " where pref_code is not null and pref_code <> ''"
+                               " group by pref_code;")
+                conn.commit()
