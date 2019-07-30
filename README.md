@@ -6,3 +6,5 @@ scrapy crawl boundary_city -s LOG_FILE=output/boundary_city.log
 scrapy crawl boundary_chome -s LOG_FILE=output/boundary_chome.log
 # 駅データ
 scrapy crawl station -a username=*** -a password=***
+# 郵便番号
+scrapy crawl postcode -s LOG_FILE=output/postcode.log
