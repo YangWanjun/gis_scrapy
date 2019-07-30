@@ -29,10 +29,6 @@ class RailwayCompanyPipeline(object):
 
     def close_spider(self, spider: scrapy.Spider):
         # コネクションの終了
-        print('railway_company_list', len(self.railway_company_list))
-        print('railway_route_list', len(self.railway_route_list))
-        print('railway_station_list', len(self.railway_station_list))
-        print('join_station_list', len(self.join_station_list))
         for item in self.railway_company_list:
             self.add_railway_company(item)
         for item in self.railway_route_list:

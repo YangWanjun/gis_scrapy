@@ -15,10 +15,11 @@ def read_shape_file(path, encoding='cp932', srid=4326):
         raise Exception('シェープファイルが存在しません。')
     shp = shapefile.Reader(path, encoding=encoding)
     fields = shp.fields[1:]
-    for shape_record in shp.iterShapeRecords():
+    total = shp.numRecords
+    for i, shape_record in enumerate(shp.iterShapeRecords()):
         data = {}
         for f_name, f_type, f_length, f_decmail_length in fields:
             data[f_name] = shape_record.record[f_name]
         data['geom'] = shape_record.shape.__geo_interface__
         data['geom']['crs'] = {"type": "name", "properties": {"name": "EPSG:{}".format(srid)}}
-        yield data
+        yield i, total, data
