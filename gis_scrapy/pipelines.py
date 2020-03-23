@@ -37,9 +37,10 @@ class RailwayCompanyPipeline(object):
             self.add_railway_station(item)
         for item in self.join_station_list:
             self.add_join_station(item)
-        self.conn.commit()
-        self.cur.close()
-        self.conn.close()
+        if self.conn:
+            self.conn.commit()
+            self.cur.close()
+            self.conn.close()
 
     def process_item(self, item: scrapy.Item, spider: scrapy.Spider):
         if isinstance(item, RailwayCompanyItem):
