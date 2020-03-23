@@ -74,6 +74,7 @@ class BankSpider(BaseSpider):
                     if row[0] == 0:
                         cursor.execute("INSERT INTO mst_bank_branch (bank_id, branch_no, branch_name, created_dt, updated_dt, is_deleted) "
                                        "VALUES (%s, %s, %s, %s, %s, 0)", (bank_code, branch_code, branch_name, now, now))
+                        self.conn.commit()
                         print(bank_code, bank_name, branch_code, branch_name, '追加済')
                         yield scrapy.Request(url=item.attrib['href'], callback=self.parse_detail, meta={
                             'bank_code': bank_code,
@@ -96,7 +97,7 @@ class BankSpider(BaseSpider):
             elif name == '住所':
                 data['address'] = value.replace("［", "").strip() if value else None
             elif name == "電話番号":
-                data['tel'] = value
+                data['tel'] = value.replace('-', '') if value else None
             elif name == '外部リンク':
                 if len(tr.css('td a')) > 0:
                     data['url'] = tr.css('td a')[0].attrib['href']
