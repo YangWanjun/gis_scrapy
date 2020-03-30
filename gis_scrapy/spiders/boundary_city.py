@@ -57,7 +57,7 @@ class BoundaryCitySpider(BaseSpider):
         conn_string = self.settings.get('POSTGRESQL_URL')
         with psycopg2.connect(conn_string) as conn:
             with conn.cursor() as cursor:
-                cursor.execute('truncate gis_city;')
+                cursor.execute('truncate gis_city cascade;')
                 for filename in os.listdir(TEMP_DIR):
                     if not filename.endswith('.shp'):
                         continue

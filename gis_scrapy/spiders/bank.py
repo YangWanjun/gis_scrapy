@@ -5,10 +5,10 @@ import scrapy
 from gis_scrapy.utils.base_scrapy import BaseSpider
 
 MYSQL_CONFIG = {
-    'host': os.environ['MYSQL_PORT_3306_TCP_ADDR'],
+    'host': os.environ.get('MYSQL_PORT_3306_TCP_ADDR', None),
     'db': 'sales',  # Database Name
     'user': 'root',
-    'passwd': os.environ['MYSQL_ENV_MYSQL_ROOT_PASSWORD'],
+    'passwd': os.environ.get('MYSQL_ENV_MYSQL_ROOT_PASSWORD', None),
     'charset': 'utf8',
 }
 
