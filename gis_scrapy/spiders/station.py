@@ -34,10 +34,10 @@ class StationSpider(scrapy.Spider):
         if len(exists) == 0:
             self.logger.error('Login failed')
             return
-        href = exists[0].get()
-        yield scrapy.Request(url=href, callback=self.parse_download)
-
-    def parse_download(self, response):
+    #     href = exists[0].get()
+    #     yield scrapy.Request(url=href, callback=self.parse_download)
+    #
+    # def parse_download(self, response):
         table = response.css("table.list02")[0]
         for td in table.css("td"):
             ele = td.css('a')[0]
